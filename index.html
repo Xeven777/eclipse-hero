@@ -48,6 +48,15 @@
       font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
     }
 
+    @media (max-width: 640px) {
+      .text-fluid-h1 {
+        font-size: clamp(2rem, 1.5rem + 2.5vw, 2.85rem);
+        line-height: 1.15;
+      }
+      .aside-cell { padding: 0.625rem; }
+      .aside-desc { font-size: 0.8125rem; }
+    }
+
     [data-anim] {
       opacity: 0;
     }
@@ -61,19 +70,22 @@
 
 <body class="bg-stone-950">
 
-  <section class="relative isolate min-h-[700px] h-[100svh] w-full overflow-hidden bg-stone-950">
+  <section class="relative isolate min-h-svh w-full overflow-hidden bg-stone-950 lg:h-[100svh] lg:min-h-[700px]">
     <div class="absolute inset-0 -z-20 bg-cover bg-center brightness-110 saturate-120"
       style="background-image: url('bg.webp');"></div>
     <div
-      class="pointer-events-none absolute inset-y-0 left-0 -z-10 w-full max-w-[36%] bg-gradient-to-r from-stone-950/60 via-stone-950/20 to-transparent backdrop-blur-sm mask-r-from-30%">
+      class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-stone-950/50 to-stone-950/30 lg:hidden">
     </div>
     <div
-      class="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full max-w-[36%] bg-gradient-to-l from-rose-950/50 via-rose-950/15 to-transparent backdrop-blur-sm mask-l-from-30%">
+      class="pointer-events-none absolute inset-y-0 left-0 -z-10 hidden w-full max-w-[36%] bg-gradient-to-r from-stone-950/60 via-stone-950/20 to-transparent backdrop-blur-sm mask-r-from-30% lg:block">
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 -z-10 hidden w-full max-w-[36%] bg-gradient-to-l from-rose-950/50 via-rose-950/15 to-transparent backdrop-blur-sm mask-l-from-30% lg:block">
     </div>
 
-    <div class="relative flex h-full w-full flex-col px-6 py-6 sm:px-10 sm:py-8 lg:px-14 lg:py-10">
+    <div class="relative flex min-h-svh w-full flex-col px-5 py-6 sm:px-8 sm:py-8 lg:h-full lg:min-h-0 lg:px-14 lg:py-10">
 
-      <header class="flex w-full items-center justify-between gap-4" data-anim="fade">
+      <header class="flex w-full items-center justify-between gap-2 sm:gap-4" data-anim="fade">
         <div class="flex items-center gap-3 sm:gap-5">
           <div class="grid size-7 grid-cols-2 grid-rows-2 gap-0.5 sm:size-9" aria-hidden="true">
             <img src="logo.svg" alt="" class="col-span-2 row-span-2 h-full w-full object-cover" />
@@ -93,50 +105,52 @@
       </header>
 
       <div
-        class="mt-auto grid w-full flex-1 grid-cols-1 items-end gap-8 pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6">
+        class="my-auto grid w-full flex-1 grid-cols-1 gap-8 py-6 lg:mt-auto lg:my-0 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6 lg:pb-2">
 
-        <div class="flex max-w-xl flex-col gap-6 sm:gap-8 md:mt-20">
+        <div class="flex max-w-xl flex-col gap-5 sm:gap-6 mt-20 lg:gap-8">
           <h1 class="font-display text-fluid-h1 text-white" id="hero-heading">
-            A piece of<br />
+            A piece of<br class="hidden md:block" />
             the earth,<br />
             just for you.
           </h1>
 
-          <p class="max-w-md text-fluid-body italic text-white/80" data-anim="fade">
+          <p class="max-w-md text-fluid-body italic text-white/90" data-anim="fade">
             Born in darkness, refined by hand. We hunt for the rarest raw gemstones and shape them into beautiful pieces
             of love.
           </p>
 
           <a href="#collection"
-            class="inline-flex w-fit items-center justify-center rounded-md border border-stone-200/20 bg-gradient-to-r from-pink-950/40 to-pink-700/40 px-6 py-3 text-lg text-white backdrop-blur-sm transition-colors hover:from-pink-900/60 hover:to-pink-600/60 sm:text-xl"
+            class="inline-flex w-full items-center justify-center rounded-md border border-white/20 bg-gradient-to-r from-rose-950/70 via-pink-900/50 to-pink-700/60 px-6 py-3.5 text-base font-medium text-white shadow-lg backdrop-blur-md transition-colors hover:from-pink-900/80 hover:to-pink-600/80 sm:w-fit sm:text-lg"
             data-anim="fade">
             Explore Collection
           </a>
         </div>
 
-        <aside class="flex w-full max-w-sm flex-col gap-6 lg:w-52 lg:justify-self-end">
-          <div class="flex flex-col gap-2 border-b border-white/40 pb-4" data-anim="fade">
+        <aside
+          class="flex w-full max-w-md flex-col gap-4 rounded-xl border border-white/15 bg-stone-900/50 p-5 backdrop-blur-sm sm:p-6 lg:w-52 lg:max-w-none lg:border-none lg:bg-transparent lg:p-0 lg:backdrop-blur-none lg:justify-self-end"
+          data-anim="fade">
+          <div class="flex flex-col gap-1.5 border-b border-white/20 pb-3">
             <h2 class="font-display text-fluid-card-title font-thin tracking-wide text-white">The Diamond Ring</h2>
-            <p class="text-sm font-normal leading-relaxed text-white/60">
+            <p class="text-sm font-normal leading-relaxed text-white/70 aside-desc">
               Cut from a single block of raw black tourmaline, framed by weathered sterling silver. No two are
               identical.
             </p>
           </div>
 
           <dl class="grid grid-cols-2 border border-white/20 text-xs" data-anim="fade">
-            <div class="flex flex-col gap-1.5 border-b border-r border-white/20 p-3">
+            <div class="flex flex-col gap-1.5 border-b border-r border-white/20 aside-cell p-3">
               <dt class="tracking-widest text-white/70">TYPE</dt>
               <dd class="text-white">Atelier Custom</dd>
             </div>
-            <div class="flex flex-col gap-1.5 border-b border-white/20 p-3">
+            <div class="flex flex-col gap-1.5 border-b border-white/20 aside-cell p-3">
               <dt class="tracking-widest text-white/70">MATERIAL</dt>
               <dd class="text-white">Raw Tourmaline</dd>
             </div>
-            <div class="flex flex-col gap-1.5 border-r border-white/20 p-3">
+            <div class="flex flex-col gap-1.5 border-r border-white/20 aside-cell p-3">
               <dt class="tracking-widest text-white/70">VIBE</dt>
               <dd class="text-white">Effortless</dd>
             </div>
-            <div class="flex flex-col gap-1.5 p-3">
+            <div class="flex flex-col gap-1.5 aside-cell p-3">
               <dt class="tracking-widest text-white/70">STATUS</dt>
               <dd class="text-white">One of One</dd>
             </div>
@@ -148,7 +162,7 @@
   </section>
 
   <script type="module">
-      import { animate, createTimeline, stagger, splitText, utils } from 'https://cdn.jsdelivr.net/npm/animejs@4.2.1/+esm';
+    import { animate, createTimeline, stagger, splitText, utils } from 'https://cdn.jsdelivr.net/npm/animejs@4.2.1/+esm';
 
     const heading = document.querySelector('#hero-heading');
     const fadeTargets = document.querySelectorAll('[data-anim="nav"], [data-anim="fade"]');
