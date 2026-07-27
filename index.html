@@ -67,11 +67,8 @@
 
       <header class="flex w-full items-center justify-between gap-4" data-anim="fade">
         <div class="flex items-center gap-3 sm:gap-5">
-          <div class="grid size-8 grid-cols-2 grid-rows-2 gap-0.5 sm:size-10" aria-hidden="true">
-            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
-            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
-            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
-            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
+          <div class="grid size-7 grid-cols-2 grid-rows-2 gap-0.5 sm:size-9" aria-hidden="true">
+            <img src="logo.svg" alt="" class="col-span-2 row-span-2 h-full w-full object-cover" />
           </div>
           <span class="font-display text-fluid-logo tracking-[0.2em] text-white">ECLIPSE</span>
         </div>
@@ -80,8 +77,8 @@
           class="group flex items-center gap-2 font-display text-fluid-logo text-white/80 transition-colors hover:text-white">
           <span>Contact Us</span>
           <svg
-            class="size-3 -translate-y-px transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-1"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            class="size-6 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-1"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </a>
@@ -103,7 +100,7 @@
           </p>
 
           <a href="#collection"
-            class="inline-flex w-fit items-center justify-center rounded-md border border-stone-300/20 bg-gradient-to-r from-pink-950/40 to-pink-700/40 px-6 py-3 text-lg text-white backdrop-blur-sm transition-colors hover:from-pink-900/60 hover:to-pink-600/60 sm:text-xl"
+            class="inline-flex w-fit items-center justify-center rounded-md border border-stone-200/20 bg-gradient-to-r from-pink-950/40 to-pink-700/40 px-6 py-3 text-lg text-white backdrop-blur-sm transition-colors hover:from-pink-900/60 hover:to-pink-600/60 sm:text-xl"
             data-anim="fade">
             Explore Collection
           </a>
@@ -111,7 +108,7 @@
 
         <aside class="flex w-full max-w-sm flex-col gap-6 lg:w-52 lg:justify-self-end">
           <div class="flex flex-col gap-2 border-b border-white/40 pb-4" data-anim="fade">
-            <h2 class="font-display text-fluid-card-title font-thin tracking-tight text-white">The Diamond Ring</h2>
+            <h2 class="font-display text-fluid-card-title font-thin tracking-wide text-white">The Diamond Ring</h2>
             <p class="text-sm font-normal leading-relaxed text-white/60">
               Cut from a single block of raw black tourmaline, framed by weathered sterling silver. No two are
               identical.
@@ -143,7 +140,7 @@
   </section>
 
   <script type="module">
-    import { animate, createTimeline, stagger, splitText, utils } from 'https://esm.sh/animejs@4.2.1';
+      import { animate, createTimeline, stagger, splitText, utils } from 'https://cdn.jsdelivr.net/npm/animejs@4.2.1/+esm';
 
     const heading = document.querySelector('#hero-heading');
     const fadeTargets = document.querySelectorAll('[data-anim="nav"], [data-anim="fade"]');
