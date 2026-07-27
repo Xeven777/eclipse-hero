@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eclipse — The Diamond Ring</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Mioya';
+      src: url("MioyaVF.woff2") format("woff2");
+    }
+
+    body {
+      font-family: "Instrument Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .font-display {
+      font-family: 'Mioya', 'Playfair Display', 'Times New Roman', serif;
+    }
+
+    .text-fluid-h1 {
+      font-size: clamp(2.25rem, 1.35rem + 3.75vw, 4.5rem);
+      line-height: 1.05;
+    }
+
+    .text-fluid-body {
+      font-size: clamp(0.9375rem, 0.85rem + 0.4vw, 1.25rem);
+    }
+
+    .text-fluid-logo {
+      font-size: clamp(1.125rem, 0.95rem + 0.6vw, 1.5rem);
+    }
+
+    .text-fluid-card-title {
+      font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
+    }
+
+    [data-anim] {
+      opacity: 0;
+    }
+
+    .word {
+      display: inline-block;
+      will-change: transform, opacity;
+    }
+  </style>
+</head>
+
+<body class="bg-stone-950">
+
+  <section class="relative isolate min-h-[700px] h-[100svh] w-full overflow-hidden bg-stone-950">
+    <div class="absolute inset-0 -z-20 bg-cover bg-center brightness-110 saturate-120"
+      style="background-image: url('bg.webp');"></div>
+    <div
+      class="pointer-events-none absolute inset-y-0 left-0 -z-10 w-full max-w-[36%] bg-gradient-to-r from-stone-950/60 via-stone-950/20 to-transparent backdrop-blur-sm mask-r-from-30%">
+    </div>
+    <div
+      class="pointer-events-none absolute inset-y-0 right-0 -z-10 w-full max-w-[36%] bg-gradient-to-l from-rose-950/50 via-rose-950/15 to-transparent backdrop-blur-sm mask-l-from-30%">
+    </div>
+
+    <div class="relative flex h-full w-full flex-col px-6 py-6 sm:px-10 sm:py-8 lg:px-14 lg:py-10">
+
+      <header class="flex w-full items-center justify-between gap-4" data-anim="fade">
+        <div class="flex items-center gap-3 sm:gap-5">
+          <div class="grid size-8 grid-cols-2 grid-rows-2 gap-0.5 sm:size-10" aria-hidden="true">
+            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
+            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
+            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
+            <span class="bg-gradient-to-br from-pink-200 to-white/50"></span>
+          </div>
+          <span class="font-display text-fluid-logo tracking-[0.2em] text-white">ECLIPSE</span>
+        </div>
+
+        <a href="#contact"
+          class="group flex items-center gap-2 font-display text-fluid-logo text-white/80 transition-colors hover:text-white">
+          <span>Contact Us</span>
+          <svg
+            class="size-3 -translate-y-px transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-1"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </header>
+
+      <div
+        class="mt-auto grid w-full flex-1 grid-cols-1 items-end gap-8 pb-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6">
+
+        <div class="flex max-w-xl flex-col gap-6 sm:gap-8 md:mt-20">
+          <h1 class="font-display text-fluid-h1 text-white" id="hero-heading">
+            A piece of<br />
+            the earth,<br />
+            just for you.
+          </h1>
+
+          <p class="max-w-md text-fluid-body italic text-white/80" data-anim="fade">
+            Born in darkness, refined by hand. We hunt for the rarest raw gemstones and shape them into beautiful pieces
+            of love.
+          </p>
+
+          <a href="#collection"
+            class="inline-flex w-fit items-center justify-center rounded-md border border-stone-300/20 bg-gradient-to-r from-pink-950/40 to-pink-700/40 px-6 py-3 text-lg text-white backdrop-blur-sm transition-colors hover:from-pink-900/60 hover:to-pink-600/60 sm:text-xl"
+            data-anim="fade">
+            Explore Collection
+          </a>
+        </div>
+
+        <aside class="flex w-full max-w-sm flex-col gap-6 lg:w-52 lg:justify-self-end">
+          <div class="flex flex-col gap-2 border-b border-white/40 pb-4" data-anim="fade">
+            <h2 class="font-display text-fluid-card-title font-thin tracking-tight text-white">The Diamond Ring</h2>
+            <p class="text-sm font-normal leading-relaxed text-white/60">
+              Cut from a single block of raw black tourmaline, framed by weathered sterling silver. No two are
+              identical.
+            </p>
+          </div>
+
+          <dl class="grid grid-cols-2 border border-white/20 text-xs" data-anim="fade">
+            <div class="flex flex-col gap-1.5 border-b border-r border-white/20 p-3">
+              <dt class="tracking-widest text-white/70">TYPE</dt>
+              <dd class="text-white">Atelier Custom</dd>
+            </div>
+            <div class="flex flex-col gap-1.5 border-b border-white/20 p-3">
+              <dt class="tracking-widest text-white/70">MATERIAL</dt>
+              <dd class="text-white">Raw Tourmaline</dd>
+            </div>
+            <div class="flex flex-col gap-1.5 border-r border-white/20 p-3">
+              <dt class="tracking-widest text-white/70">VIBE</dt>
+              <dd class="text-white">Effortless</dd>
+            </div>
+            <div class="flex flex-col gap-1.5 p-3">
+              <dt class="tracking-widest text-white/70">STATUS</dt>
+              <dd class="text-white">One of One</dd>
+            </div>
+          </dl>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <script type="module">
+    import { animate, createTimeline, stagger, splitText, utils } from 'https://esm.sh/animejs@4.2.1';
+
+    const heading = document.querySelector('#hero-heading');
+    const fadeTargets = document.querySelectorAll('[data-anim="nav"], [data-anim="fade"]');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      utils.set([heading, ...fadeTargets], { opacity: 1 });
+    } else {
+      const { words } = splitText(heading, { words: true, chars: false, wrap: "clip" });
+      utils.set(words, { opacity: 0, y: '110%', display: 'inline-block', overflow: 'hidden' });
+      heading.style.opacity = '1';
+
+      createTimeline({ defaults: { ease: 'outExpo' } })
+        .add(words, {
+          y: ['110%', '0%'],
+          opacity: [0, 1],
+          duration: 1100,
+          delay: stagger(90),
+        })
+        .add(fadeTargets, {
+          opacity: [0, 1],
+          translateY: [18, 0],
+          duration: 1000,
+          delay: stagger(100),
+          ease: 'outQuad',
+        }, '-=500');
+    }
+  </script>
+
+</body>
+
+</html>
